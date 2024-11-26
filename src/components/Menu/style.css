@@ -1,0 +1,137 @@
+header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  padding: 14px 40px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > ul {
+  list-style: none;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: auto;
+  flex-direction: column;
+  background-color: #fff;
+  gap: 40px;
+  padding: 24px;
+  flex: 1;
+  z-index: 999;
+}
+
+#close {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul > li {
+  position: relative;
+  color: #686868;
+}
+
+nav li ul a {
+  color: #686868 !important;
+}
+
+li ul {
+  position: relative;
+  border-radius: 10px;
+  padding: 24px 36px;
+  overflow: auto;
+  display: none;
+  align-items: flex-start !important;
+  width: max-content;
+}
+
+.disabled {
+  color: #ccc;
+}
+
+li:hover ul {
+  display: flex !important;
+  flex-direction: column;
+  gap: 15px;
+  font-weight: 400;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .button {
+  background: #fff;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 15px;
+  width: 136px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  header {
+    position: fixed;
+  }
+
+  nav > ul {
+    display: flex !important;
+    position: relative;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    overflow: inherit;
+  }
+
+  #close {
+    display: none;
+  }
+
+  .login {
+    flex-direction: row;
+    margin-left: auto;
+  }
+
+  li ul {
+    position: absolute;
+    top: calc(100% + 20px);
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  #hamburguer {
+    display: none;
+  }
+}

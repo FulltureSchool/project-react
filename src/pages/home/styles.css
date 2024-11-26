@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.content {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+}
+
+.mainImage {
+  flex: 1;
+  background-image: url("../../../public/image-hero-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 281px;
+}
+
+.content button {
+  background: #000;
+  color: #fff;
+  border-radius: 15px;
+  width: 136px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.content .clients {
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.content img {
+  max-width: 100px;
+  height: auto;
+}
+
+.content p {
+  color: #686868;
+  margin-bottom: 16px;
+}
+
+.content h1 {
+  margin: 47px 0 16px 0;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    max-width: 1336px;
+    margin: 10vh auto 0 auto;
+    gap: 125px;
+  }
+
+  .container div {
+    flex: 1;
+  }
+
+  .content {
+    text-align: left;
+  }
+
+  .content .clients {
+    margin-top: 118px;
+  }
+
+  .content h1 {
+    font-size: 80px;
+    margin-bottom: 48px;
+  }
+
+  .content p {
+    margin-bottom: 41px;
+  }
+
+  .content button {
+    margin-left: 0;
+    border: 1px solid #000;
+    color: #000;
+    background-color: #fff;
+  }
+
+  .mainImage {
+    flex: 1;
+    background-image: url("../../../public/image-hero-desktop.png");
+    min-height: 80vh;
+  }
+}
